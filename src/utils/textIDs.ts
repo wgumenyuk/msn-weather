@@ -1,6 +1,3 @@
-/**
-    TEST
-*/
 export default {
     "0": "thunderstorm",
     "1": "thunderstorm",
