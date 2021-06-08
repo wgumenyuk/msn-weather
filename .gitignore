@@ -3,3 +3,6 @@
 
 # Build
 /build
+
+# Coverage
+/coverage

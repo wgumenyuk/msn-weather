@@ -12,4 +12,4 @@ scripts:
   - npm run test
 
 after_success:
-  - codecov -f ./coverage/*.json
+  - codecov

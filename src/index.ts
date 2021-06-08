@@ -1,6 +1,6 @@
 import { parseStringPromise as parseXML } from "xml2js";
 import request from "./utils/request";
-import convertID from "./utils/convertID";
+import textIDs from "./utils/textIDs";
 
 // #region Types and interfaces
 type Degree = "C" | "F";
@@ -106,7 +106,7 @@ async function search(options: Options): Promise<Weather> {
                 high: forecast.high[0] + `°${degreeType}`,
             },
             sky: {
-                code: convertID(forecast.skycodeday[0]),
+                code: textIDs[forecast.skycodeday[0]],
                 text: forecast.skytextday[0]
             },
             precip: forecast.precip[0] + "%"
@@ -119,7 +119,7 @@ async function search(options: Options): Promise<Weather> {
             day: current.day,
             temperature: current.temperature + `°${degreeType}`,
             sky: {
-                code: convertID(current.skycode),
+                code: textIDs[current.skycode],
                 text: current.skytext
             },
             observation: {
