@@ -9,7 +9,8 @@
         "declaration": true,
         "esModuleInterop": true,
         "noEmitOnError": true,
-        "removeComments": true
+        "removeComments": true,
+        "sourceMap": true
     },
     "include": [
         "./src/**/*"
