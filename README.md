@@ -8,8 +8,8 @@
   [![Travis CI](https://img.shields.io/travis/com/wgumenyuk/msn-weather?label=Build&style=flat-square)](https://travis-ci.com/github/wgumenyuk/msn-weather)
   [![Codecov](https://img.shields.io/codecov/c/github/wgumenyuk/msn-weather?label=Coverage&logo=codecov&style=flat-square)](https://codecov.io/gh/wgumenyuk/msn-weather)
   [![NPM downloads](https://img.shields.io/npm/dt/msn-weather?label=Downloads&style=flat-square)](https://www.npmjs.com/package/msn-weather)
-  [![License](https://img.shields.io/github/license/wgumenyuk/msn-weather?label=License&style=flat-square)](./LICENSE)
   [![Version](https://img.shields.io/github/package-json/v/wgumenyuk/msn-weather?label=Version&style=flat-square)](https://github.com/wgumenyuk/msn-weather)
+  [![License](https://img.shields.io/github/license/wgumenyuk/msn-weather?label=License&style=flat-square)](./LICENSE)
   
   [![NPM install info](https://nodei.co/npm/msn-weather.png?downloads=true&stars=true)](https://www.npmjs.com/package/msn-weather)
 </div>
