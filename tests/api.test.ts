@@ -1,48 +1,182 @@
+import fs from "fs";
+import path from "path";
+import nock from "nock";
 import weather from "../src";
 import request from "../src/utils/request";
 
+const msnMock = nock("http://weather.service.msn.com/find.aspx");
+
+const mockDataPath = path.join(__dirname, "./data/mock.xml");
+const mockData = fs.readFileSync(mockDataPath, "utf-8");
+
+const url =
+    "http://weather.service.msn.com/find.aspx?src=msn&" +
+    "weadegreetype=C&" +
+    "culture=en&" +
+    `weasearchstr=${encodeURIComponent("München, DE")}`;
+
 describe("msn-weather", () => {
     describe("msn-weather#search", () => {
+        it("should be a function", (done: jest.DoneCallback) => {
+            expect(typeof weather.search).toBe("function");
+            done();
+        });
+
         it("should not accept invalid options", async () => {            
             await expect(weather.search(null))
                 .rejects
                 .toThrow("Invalid options were specified");
-        });
 
-        it("should not accept bad locations", async () => {
-            const options = {
-                location: ""
-            };
-            
-            await expect(weather.search(options))
+            await expect(weather.search({ location: "" }))
                 .rejects
                 .toThrow("No location was given");
+
+            await expect(weather.search({ location: "München, DE", language: "ABC" }))
+                .rejects
+                .toThrow("Invalid language code 'ABC', make sure it adheres to the ISO 639.1:2002 standard");
+
+            // @ts-ignore
+            await expect(weather.search({ location: "München, DE", degreeType: "K" }))
+                .rejects
+                .toThrow("Invalid degree type 'K'");
         });
 
         it("should fail when receiving a non-200 status code", async () => {
-            const baseURL = "http://httpstat.us";
-            const statuses = [
-                "404",
-                "400",
-                "500"
-            ];
+            msnMock
+                .get("")
+                .query({
+                    src: "msn",
+                    weadegreetype: "C",
+                    culture: "en",
+                    weasearchstr: "München, DE"
+                })
+                .reply(404);
 
-            for(const status of statuses) {
-                await expect(request(`${baseURL}/${status}`))
-                    .rejects
-                    .toThrow(`Request failed with status ${status}`);
-            }
+            await expect(request(url))
+                .rejects
+                .toThrow("Request failed with status 404");
         });
 
         it("should fail when timing out after 5 seconds", async () => {
-            const url = "http://httpstat.us/200?sleep=5000";
+            msnMock
+                .get("")
+                .query({
+                    src: "msn",
+                    weadegreetype: "C",
+                    culture: "en",
+                    weasearchstr: "München, DE"
+                })
+                .delayConnection(5100)
+                .reply(500);
 
             await expect(request(url))
                 .rejects
                 .toThrow("Request timed out after 5s");
-        }, 6000);
 
-        it("should return correct weather data for a location", async () => {    
+            nock.abortPendingRequests();
+        });
+
+        it("should fail when a connection error occurs", async () => {
+            msnMock
+                .get("")
+                .query({
+                    src: "msn",
+                    weadegreetype: "C",
+                    culture: "en",
+                    weasearchstr: "München, DE"
+                })
+                .replyWithError("ECONNRESET");
+
+            await expect(request(url))
+                .rejects
+                .toThrow("ECONNRESET");
+        });
+
+        it("should fail if the response body cant't be parsed", async () => {    
+            msnMock
+                .get("")
+                .query({
+                    src: "msn",
+                    weadegreetype: "C",
+                    culture: "en",
+                    weasearchstr: "München, DE"
+                })
+                .reply(200);
+            
+            const options = {
+                location: "München, DE"
+            };
+
+            await expect(weather.search(options))
+                .rejects
+                .toThrow("Couldn't parse response body");
+        });
+
+        it("should fail if current weather data can't be retrieved", async () => {    
+            msnMock
+                .get("")
+                .query({
+                    src: "msn",
+                    weadegreetype: "C",
+                    culture: "en",
+                    weasearchstr: "München, DE"
+                })
+                .reply(200,
+                    `<weatherdata
+                        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <weather></weather>
+                    </weatherdata>
+                `);
+            
+            const options = {
+                location: "München, DE"
+            };
+
+            await expect(weather.search(options))
+                .rejects
+                .toThrow("Bad response: Failed to receive current weather data");
+        });
+
+        it("should fail if forecast weather data can't be retrieved", async () => {    
+            msnMock
+                .get("")
+                .query({
+                    src: "msn",
+                    weadegreetype: "C",
+                    culture: "en",
+                    weasearchstr: "München, DE"
+                })
+                .reply(200,
+                    `<weatherdata
+                        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <weather>
+                            <current></current>
+                        </weather>
+                    </weatherdata>
+                `);
+            
+            const options = {
+                location: "München, DE"
+            };
+
+            await expect(weather.search(options))
+                .rejects
+                .toThrow("Bad response: Failed to receive forecast weather data");
+        });
+
+        it("should return correct weather data for a location", async () => {        
+            msnMock
+                .get("")
+                .query({
+                    src: "msn",
+                    weadegreetype: "C",
+                    culture: "en",
+                    weasearchstr: "München, DE"
+                })
+                .reply(200, mockData);
+            
             const data = await weather.search({
                 location: "München, DE"
             });

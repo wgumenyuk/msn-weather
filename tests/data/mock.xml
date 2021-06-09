@@ -1,0 +1,47 @@
+<weatherdata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <weather weatherlocationcode="wc:GMXX0087" weatherlocationname="Munich, Germany" url="http://a.msn.com/54/en-US/ct48.139,11.58?ctsrc=msn" imagerelativeurl="http://blob.weather.microsoft.com/static/weather4/en-us/" degreetype="C" provider="Foreca" attribution="http://www.foreca.com/" attribution2="Foreca" lat="48.139" long="11.58" timezone="2" alert="" entityid="22344" encodedlocationname="Munich%2C+BY%2C+Germany">
+        <current temperature="19" skycode="26" skytext="Cloudy" date="2021-06-09" observationtime="17:30:00" observationpoint="Munich, BY, Germany" feelslike="20" humidity="59" winddisplay="8 km/h North" day="Wednesday" shortday="Wed" windspeed="8 km/h" />
+        <forecast low="13" high="24" skycodeday="27" skytextday="Mostly Cloudy" date="2021-06-08" day="Tuesday" shortday="Tue" precip="" />
+        <forecast low="14" high="24" skycodeday="30" skytextday="Partly Sunny" date="2021-06-09" day="Wednesday" shortday="Wed" precip="90" />
+        <forecast low="13" high="23" skycodeday="9" skytextday="Light Rain" date="2021-06-10" day="Thursday" shortday="Thu" precip="90" />
+        <forecast low="15" high="23" skycodeday="9" skytextday="Light Rain" date="2021-06-11" day="Friday" shortday="Fri" precip="90" />
+        <forecast low="15" high="23" skycodeday="9" skytextday="Light Rain" date="2021-06-12" day="Saturday" shortday="Sat" precip="100" />
+        <toolbar timewindow="60" minversion="1.0.1965.0" />
+    </weather>
+    <weather weatherlocationcode="wc:8200127" weatherlocationname="München, Germany" url="http://a.msn.com/54/en-US/ct48.696,13.463?ctsrc=msn" imagerelativeurl="http://blob.weather.microsoft.com/static/weather4/en-us/" degreetype="C" provider="Foreca" attribution="http://www.foreca.com/" attribution2="Foreca" lat="48.696" long="13.463" timezone="2" alert="" entityid="8200127" encodedlocationname="M%C3%BCnchen%2C+BY%2C+Germany">
+        <current temperature="18" skycode="26" skytext="Cloudy" date="2021-06-09" observationtime="18:00:00" observationpoint="München, BY, Germany" feelslike="18" humidity="76" winddisplay="20 km/h North" day="Wednesday" shortday="Wed" windspeed="20 km/h" />
+        <forecast low="14" high="24" skycodeday="27" skytextday="Mostly Cloudy" date="2021-06-08" day="Tuesday" shortday="Tue" precip="" />
+        <forecast low="14" high="24" skycodeday="28" skytextday="Mostly Cloudy" date="2021-06-09" day="Wednesday" shortday="Wed" precip="80" />
+        <forecast low="14" high="21" skycodeday="30" skytextday="Partly Sunny" date="2021-06-10" day="Thursday" shortday="Thu" precip="90" />
+        <forecast low="15" high="21" skycodeday="9" skytextday="Light Rain" date="2021-06-11" day="Friday" shortday="Fri" precip="100" />
+        <forecast low="15" high="22" skycodeday="9" skytextday="Light Rain" date="2021-06-12" day="Saturday" shortday="Sat" precip="100" />
+        <toolbar timewindow="60" minversion="1.0.1965.0" />
+    </weather>
+    <weather weatherlocationcode="wc:8155851" weatherlocationname="München, Germany" url="http://a.msn.com/54/en-US/ct49.556,11.58?ctsrc=msn" imagerelativeurl="http://blob.weather.microsoft.com/static/weather4/en-us/" degreetype="C" provider="Foreca" attribution="http://www.foreca.com/" attribution2="Foreca" lat="49.556" long="11.58" timezone="2" alert="" entityid="8155851" encodedlocationname="M%C3%BCnchen%2C+BY%2C+Germany">
+        <current temperature="22" skycode="28" skytext="Mostly Cloudy" date="2021-06-09" observationtime="17:00:00" observationpoint="München, BY, Germany" feelslike="23" humidity="49" winddisplay="7 km/h Northeast" day="Wednesday" shortday="Wed" windspeed="7 km/h" />
+        <forecast low="14" high="23" skycodeday="27" skytextday="Mostly Cloudy" date="2021-06-08" day="Tuesday" shortday="Tue" precip="" />
+        <forecast low="13" high="21" skycodeday="26" skytextday="Cloudy" date="2021-06-09" day="Wednesday" shortday="Wed" precip="80" />
+        <forecast low="13" high="22" skycodeday="34" skytextday="Mostly Sunny" date="2021-06-10" day="Thursday" shortday="Thu" precip="70" />
+        <forecast low="15" high="23" skycodeday="30" skytextday="Partly Sunny" date="2021-06-11" day="Friday" shortday="Fri" precip="40" />
+        <forecast low="13" high="23" skycodeday="9" skytextday="Light Rain" date="2021-06-12" day="Saturday" shortday="Sat" precip="100" />
+        <toolbar timewindow="60" minversion="1.0.1965.0" />
+    </weather>
+    <weather weatherlocationcode="wc:8231339" weatherlocationname="München, Germany" url="http://a.msn.com/54/en-US/ct51.607,13.313?ctsrc=msn" imagerelativeurl="http://blob.weather.microsoft.com/static/weather4/en-us/" degreetype="C" provider="Foreca" attribution="http://www.foreca.com/" attribution2="Foreca" lat="51.607" long="13.313" timezone="2" alert="" entityid="8231339" encodedlocationname="M%C3%BCnchen%2C+BB%2C+Germany">
+        <current temperature="26" skycode="34" skytext="Mostly Sunny" date="2021-06-09" observationtime="17:30:00" observationpoint="München, BB, Germany" feelslike="26" humidity="33" winddisplay="6 km/h North" day="Wednesday" shortday="Wed" windspeed="6 km/h" />
+        <forecast low="14" high="27" skycodeday="29" skytextday="Partly Cloudy" date="2021-06-08" day="Tuesday" shortday="Tue" precip="" />
+        <forecast low="14" high="26" skycodeday="30" skytextday="Partly Sunny" date="2021-06-09" day="Wednesday" shortday="Wed" precip="0" />
+        <forecast low="16" high="25" skycodeday="30" skytextday="Partly Sunny" date="2021-06-10" day="Thursday" shortday="Thu" precip="70" />
+        <forecast low="17" high="27" skycodeday="30" skytextday="Partly Sunny" date="2021-06-11" day="Friday" shortday="Fri" precip="30" />
+        <forecast low="10" high="22" skycodeday="9" skytextday="Light Rain" date="2021-06-12" day="Saturday" shortday="Sat" precip="100" />
+        <toolbar timewindow="60" minversion="1.0.1965.0" />
+    </weather>
+    <weather weatherlocationcode="wc:8163635" weatherlocationname="Munich, Germany" url="http://a.msn.com/54/en-US/ct48,11.67?ctsrc=msn" imagerelativeurl="http://blob.weather.microsoft.com/static/weather4/en-us/" degreetype="C" provider="Foreca" attribution="http://www.foreca.com/" attribution2="Foreca" lat="48" long="11.67" timezone="2" alert="" entityid="8163635" encodedlocationname="Munich%2C+BY%2C+Germany">
+        <current temperature="19" skycode="9" skytext="Light Rain" date="2021-06-09" observationtime="17:30:00" observationpoint="Munich, BY, Germany" feelslike="20" humidity="59" winddisplay="8 km/h North" day="Wednesday" shortday="Wed" windspeed="8 km/h" />
+        <forecast low="13" high="24" skycodeday="27" skytextday="Mostly Cloudy" date="2021-06-08" day="Tuesday" shortday="Tue" precip="" />
+        <forecast low="14" high="24" skycodeday="30" skytextday="Partly Sunny" date="2021-06-09" day="Wednesday" shortday="Wed" precip="90" />
+        <forecast low="13" high="23" skycodeday="9" skytextday="Light Rain" date="2021-06-10" day="Thursday" shortday="Thu" precip="90" />
+        <forecast low="15" high="23" skycodeday="9" skytextday="Light Rain" date="2021-06-11" day="Friday" shortday="Fri" precip="90" />
+        <forecast low="15" high="23" skycodeday="9" skytextday="Light Rain" date="2021-06-12" day="Saturday" shortday="Sat" precip="100" />
+        <toolbar timewindow="60" minversion="1.0.1965.0" />
+    </weather>
+</weatherdata>

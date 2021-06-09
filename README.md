@@ -156,7 +156,7 @@ Options for the search.
 | Parameter | Type | Optional | Default | Description |
 |-|-|-|-|-|
 | `location` | String | ❌ | None | Location for the weather data. |
-| `language` | String | ✔ | `EN` | Language in which weather text will be returned. The value must be a [ISO 639.1:2002 language code](https://en.wikipedia.org/wiki/ISO_639-1). |
+| `language` | String | ✔  | `en`  | Language in which weather text will be returned. The value must be a [ISO 639.1:2002 language code](https://en.wikipedia.org/wiki/ISO_639-1). |
 | `degreeType` | String | ✔ | `C` | Degree type for temperature values. Either Celsius (`C`) or Fahrenheit (`F`). |
 
 ## Resources

@@ -1,4 +1,7 @@
-export default {
+/**
+    A list of custom text IDs for MSN's number codes.
+*/
+const textIDs: { [key: string]: string } = {
     "0": "thunderstorm",
     "1": "thunderstorm",
     "2": "thunderstorm",
@@ -9,8 +12,8 @@ export default {
     "5": "rain_snow_mix",
     "6": "sleet_snow_mix",
     "7": "rain_snow_sleet_mix",
-    "8": "icy",
-    "9": "icy",
+    "8": "light_rain",
+    "9": "light_rain",
     "10": "rain_sleet_mix",
     "11": "light_rain",
     "12": "rain",
@@ -33,9 +36,9 @@ export default {
     "27": "mostly_cloudy_night",
     "29": "mostly_cloudy_night",
     "33": "mostly_cloudy_night",
-    "28": "mostly_cloudy",
-    "30": "mostly_cloudy",
-    "34": "mostly_cloudy",
+    "28": "partly_sunny",
+    "30": "partly_sunny",
+    "34": "partly_sunny",
     "31": "clear_night",
     "32": "clear",
     "36": "hot",
@@ -47,3 +50,5 @@ export default {
     "46": "scattered_snow_showers_night",
     "47": "scattered_thunderstorms_night"
 };
+
+export default textIDs;

@@ -1,4 +1,5 @@
 import { parseStringPromise as parseXML } from "xml2js";
+import { isDegreeType, isLanguageCode } from "./utils/validators";
 import request from "./utils/request";
 import textIDs from "./utils/textIDs";
 
@@ -64,15 +65,25 @@ async function search(options: Options): Promise<Weather> {
         throw new Error("Invalid options were specified");
     }
     
-    const language = options.language || "EN";
-    const degreeType = options.degreeType || "C";
-
     if(!options.location) {
         throw new Error("No location was given");
     }
 
+    const language = options.language || "en";
+    const degreeType = options.degreeType || "C";
+
+    if(!isLanguageCode(language)) {
+        throw new Error(`
+            Invalid language code '${language}', make sure it adheres to the ISO 639.1:2002 standard
+        `);
+    }
+
+    if(!isDegreeType(degreeType)) {
+        throw new Error(`Invalid degree type '${degreeType}'`);
+    }
+
     const url =
-        "http://weather.service.msn.com/find.aspx?src=msn?" +
+        "http://weather.service.msn.com/find.aspx?src=msn&" +
         `weadegreetype=${degreeType}&` +
         `culture=${language}&` +
         `weasearchstr=${encodeURIComponent(options.location)}`;
@@ -90,7 +101,7 @@ async function search(options: Options): Promise<Weather> {
     const data = json.weatherdata.weather[0];
 
     if(!data.current) {
-        throw new Error("Failed to receive current weather data");
+        throw new Error("Bad response: Failed to receive current weather data");
     }
 
     const current = data.current[0];
@@ -100,12 +111,14 @@ async function search(options: Options): Promise<Weather> {
     }
 
     if(!data.forecast) {
-        throw new Error("Failed to receive forecast weather data");
+        throw new Error("Bad response: Failed to receive forecast weather data");
     }
 
     const forecasts = [];
 
-    for(const forecast of data.forecast) {            
+    for(let i = 1; i < data.forecast.length; i++) { 
+        const forecast = data.forecast[i];
+
         forecasts.push({
             date: forecast.date[0],
             day: forecast.day[0],
