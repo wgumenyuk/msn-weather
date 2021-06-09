@@ -51,6 +51,14 @@ interface Weather {
 }
 // #endregion
 
+/**
+    Retreives weather data for a given location.
+    @param options              Options.
+    @param options.location     The location you're looking for.
+    @param options.language     The language in which text will be returned.
+    @param options.degreeType   Degree type for temperature values.
+    @returns Weather data.
+*/
 async function search(options: Options): Promise<Weather> {
     if(!options || typeof options !== "object") {
         throw new Error("Invalid options were specified");

@@ -1,4 +1,5 @@
 import weather from "../src";
+import request from "../src/utils/request";
 
 describe("msn-weather", () => {
     describe("msn-weather#search", () => {
@@ -17,6 +18,29 @@ describe("msn-weather", () => {
                 .rejects
                 .toThrow("No location was given");
         });
+
+        it("should fail when receiving a non-200 status code", async () => {
+            const baseURL = "http://httpstat.us";
+            const statuses = [
+                "404",
+                "400",
+                "500"
+            ];
+
+            for(const status of statuses) {
+                await expect(request(`${baseURL}/${status}`))
+                    .rejects
+                    .toThrow(`Request failed with status ${status}`);
+            }
+        });
+
+        it("should fail when timing out after 5 seconds", async () => {
+            const url = "http://httpstat.us/200?sleep=5000";
+
+            await expect(request(url))
+                .rejects
+                .toThrow("Request timed out after 5s");
+        }, 6000);
 
         it("should return correct weather data for a location", async () => {    
             const data = await weather.search({

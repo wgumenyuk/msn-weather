@@ -18,9 +18,15 @@ function request(url: string): Promise<string> {
             });
         });
 
+        req.on("timeout", () => {
+            reject(new Error("Request timed out after 5s"));
+        });
+
         req.on("error", (error) => {
             reject(error);
         });
+
+        req.setTimeout(5000);
     });
 }
 
