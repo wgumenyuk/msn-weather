@@ -26,7 +26,7 @@
 - [License](#license)
 
 ## About
-`msn-weather` is a powerful [Node.js](https://nodejs.org) library that allows you to easily retreive weather data for any location in the world.
+`msn-weather` is a powerful [Node.js](https://nodejs.org) library that allows you to easily retrieve weather data for any location in the world.
 As the name suggests, this wrapper uses the MSN weather API behind the scenes.
 
 - Simple and easy-to-use API
