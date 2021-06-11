@@ -1,6 +1,6 @@
 <div align="center">
   
-  ![Logo](https://user-images.githubusercontent.com/50965068/121335236-b18be480-c91a-11eb-868b-db73675eb2ec.png)
+  ![Logo](./assets/logo.png)
   
   # MSN Weather API
   A simple MSN Weather API wrapper with built-in TypeScript support.
@@ -22,7 +22,9 @@
   - [Usage with CommonJS](#usage-with-commonjs)
   - [Retrieved data format](#retrieved-data-format)
   - [`msn-weather` API](#msn-weather-api)
+- [Other languages](#other-languages)
 - [Resources](#resources)
+- [Acknowledgements](#acknowledgements)
 - [License](#license)
 
 ## About
@@ -164,6 +166,9 @@ Options for the search.
 - [Changelog](./CHANGELOG.md)
 - [NPM](https://www.npmjs.com/package/msn-weather)
 - [GitHub](https://wgithub/wgumenyuk/msn-weather)
+
+## Acknowledgements
+- [Logo](https://twemoji.twitter.com) by Twitter Twemoji (licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))
 
 ## License
 This project is licensed under [MIT](./LICENSE).
