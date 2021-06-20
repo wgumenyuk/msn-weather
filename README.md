@@ -50,7 +50,7 @@ import weather from "msn-weather";
 
 const data = await weather.search({
   location: "Munich, DE",
-  language: "EN",
+  language: "en",
   degreeType: "C"
 });
 ```
