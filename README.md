@@ -165,7 +165,7 @@ Options for the search.
 ## Resources
 - [Changelog](./CHANGELOG.md)
 - [NPM](https://www.npmjs.com/package/msn-weather)
-- [GitHub](https://wgithub/wgumenyuk/msn-weather)
+- [GitHub](https://github.com/wgumenyuk/msn-weather)
 
 ## Acknowledgements
 - [Logo](https://twemoji.twitter.com) by Twitter Twemoji (licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))
