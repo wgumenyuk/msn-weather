@@ -147,7 +147,7 @@ You will receive a JavaScript object looking like this:
 </details>
 
 ### `msn-weather` API
-#### `weather.find(options)`
+#### `weather.search(options)`
 Retrieves weather data for a given location. Returns a promise with weather data.
 
 | Parameter | Type                  | Optional | Default | Description             |
