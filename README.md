@@ -21,7 +21,7 @@
 - [Usage](#usage)
   - [Usage with CommonJS](#usage-with-commonjs)
   - [Retrieved data format](#retrieved-data-format)
-  - [`msn-weather` API](#msn-weather-api)
+  - [API documentation](#api-documentation)
 - [Other languages](#other-languages)
 - [Resources](#resources)
 - [Acknowledgements](#acknowledgements)
@@ -146,7 +146,7 @@ You will receive a JavaScript object looking like this:
   ```
 </details>
 
-### `msn-weather` API
+### API documentation
 #### `weather.search(options)`
 Retrieves weather data for a given location. Returns a promise with weather data.
 
