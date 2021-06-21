@@ -148,7 +148,7 @@ You will receive a JavaScript object looking like this:
 
 ### API documentation
 #### `weather.search(options)`
-Retrieves weather data for a given location. Returns a promise with weather data.
+Retrieves weather data for a given location. Returns a promise with weather data (see [retrieved data format](#retrieved-data-format)).
 
 | Parameter | Type                  | Optional | Default | Description             |
 |-----------|-----------------------|----------|---------|-------------------------|
