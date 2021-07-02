@@ -170,6 +170,11 @@ Options for the search.
 ## Acknowledgements
 - [Logo](https://twemoji.twitter.com) by Twitter Twemoji (licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))
 
+### Contributors
+A special thanks goes out to these contributors:
+
+- Khang ([khang-nd](https://github.com/khang-nd)) - Contributing a number of times
+
 ## License
 This project is licensed under [MIT](./LICENSE).
 
