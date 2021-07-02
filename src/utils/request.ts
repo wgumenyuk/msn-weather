@@ -1,4 +1,4 @@
-import http from "http";
+import https from "https";
 
 /**
     Sends a request using the native `http` library,
@@ -7,7 +7,7 @@ import http from "http";
 */
 function request(url: string): Promise<string> {
     return new Promise((resolve, reject) => {
-        const req = http.get(url, (res) => {
+        const req = https.get(url, (res) => {
             let data = "";
 
             if(res.statusCode !== 200) {

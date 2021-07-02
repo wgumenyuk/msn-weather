@@ -4,13 +4,13 @@ import nock from "nock";
 import weather from "../src";
 import request from "../src/utils/request";
 
-const msnMock = nock("http://weather.service.msn.com/find.aspx");
+const msnMock = nock("https://weather.service.msn.com/find.aspx");
 
 const mockDataPath = path.join(__dirname, "./data/mock.xml");
 const mockData = fs.readFileSync(mockDataPath, "utf-8");
 
 const url =
-    "http://weather.service.msn.com/find.aspx?src=msn&" +
+    "https://weather.service.msn.com/find.aspx?src=msn&" +
     "weadegreetype=C&" +
     "culture=en&" +
     `weasearchstr=${encodeURIComponent("München, DE")}`;
