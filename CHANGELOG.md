@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
-## 2.0.0
+## 2.0.0 (July 02, 2021)
 ### Added
 - Added anchor link to retreived data format to describe the returned data better
 - Added contributor acknowledgements to README
