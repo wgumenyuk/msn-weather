@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file. This projec
 ### Added
 - Added anchor link to retreived data format to describe the returned data better
 
+### Changed
+- Changed HTTP to HTTPS ([#2](https://github.com/wgumenyuk/msn-weather/issues/2))
+
 ### Fixed
 - Broken anchor link in README
 
