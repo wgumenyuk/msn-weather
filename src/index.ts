@@ -83,7 +83,7 @@ async function search(options: Options): Promise<Weather> {
     }
 
     const url =
-        "http://weather.service.msn.com/find.aspx?src=msn&" +
+        "https://weather.service.msn.com/find.aspx?src=msn&" +
         `weadegreetype=${degreeType}&` +
         `culture=${language}&` +
         `weasearchstr=${encodeURIComponent(options.location)}`;
