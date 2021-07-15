@@ -1,9 +1,9 @@
 import https from "https";
 
 /**
-    Sends a request using the native `http` library,
+    Sends a request using the native `https` library.
     @param url The target URL.
-    @returns HTTP response body.
+    @returns HTTPS response body.
 */
 function request(url: string): Promise<string> {
     return new Promise((resolve, reject) => {
