@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## Unreleased
+### Fixed
+- Fixed bad JSDoc for `request` function
+
 ## 2.0.0 (July 02, 2021)
 ### Added
 - Added anchor link to retreived data format to describe the returned data better
