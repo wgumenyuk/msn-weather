@@ -6,7 +6,7 @@ import request from "../src/utils/request";
 
 const msnMock = nock("https://weather.service.msn.com/find.aspx");
 
-const mockDataPath = path.join(__dirname, "./data/mock.xml");
+const mockDataPath = path.join(__dirname, "./expected/mock.xml");
 const mockData = fs.readFileSync(mockDataPath, "utf-8");
 
 const url =
@@ -92,7 +92,7 @@ describe("msn-weather", () => {
                 .toThrow("ECONNRESET");
         });
 
-        it("should fail if the response body cant't be parsed", async () => {    
+        it("should fail if the response body can't be parsed", async () => {    
             msnMock
                 .get("")
                 .query({
@@ -109,36 +109,10 @@ describe("msn-weather", () => {
 
             await expect(weather.search(options))
                 .rejects
-                .toThrow("Couldn't parse response body");
+                .toThrow("Bad response: Failed to parse response body");
         });
 
-        it("should fail if current weather data can't be retrieved", async () => {    
-            msnMock
-                .get("")
-                .query({
-                    src: "msn",
-                    weadegreetype: "C",
-                    culture: "en",
-                    weasearchstr: "München, DE"
-                })
-                .reply(200,
-                    `<weatherdata
-                        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <weather></weather>
-                    </weatherdata>
-                `);
-            
-            const options = {
-                location: "München, DE"
-            };
-
-            await expect(weather.search(options))
-                .rejects
-                .toThrow("Bad response: Failed to receive current weather data");
-        });
-
-        it("should fail if forecast weather data can't be retrieved", async () => {    
+        it("should fail if the respond is bad", async () => {    
             msnMock
                 .get("")
                 .query({
@@ -152,10 +126,10 @@ describe("msn-weather", () => {
                         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <weather>
-                            <current></current>
+                            <current/>
                         </weather>
-                    </weatherdata>
-                `);
+                    </weatherdata>`
+                );
             
             const options = {
                 location: "München, DE"
@@ -163,7 +137,7 @@ describe("msn-weather", () => {
 
             await expect(weather.search(options))
                 .rejects
-                .toThrow("Bad response: Failed to receive forecast weather data");
+                .toThrow("Bad response: Failed to receive weather data");
         });
 
         it("should return correct weather data for a location", async () => {        
