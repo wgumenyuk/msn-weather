@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2.1.1 (July 20, 2021)
+### Changed
+- Switched from `xml2js` to `fast-xml-parser`: this leads to a much smaller bundle size (see [xml2js](https://bundlephobia.com/package/xml2js@0.4.23) vs. [fast-xml-parser](https://bundlephobia.com/package/fast-xml-parser@3.19.0))
+- Renamed `utils` directory to `core`
+- Renamed `data` directory to `expected`
+- Improved tests
+
 ## 2.0.1 (July 16, 2021)
 ### Fixed
 - Fixed bad JSDoc for `request` function
