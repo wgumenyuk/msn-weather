@@ -7,7 +7,7 @@
     "build": "tsc",
     "dev": "ts-node ./src/index.ts",
     "lint": "eslint ./src --ext .ts",
-    "test": "jest --coverage"
+    "test": "jest --coverage --silent"
   },
   "repository": {
     "type": "git",
