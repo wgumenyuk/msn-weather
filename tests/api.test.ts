@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import nock from "nock";
 import weather from "../src";
-import request from "../src/utils/request";
+import request from "../src/core/request";
 
 const msnMock = nock("https://weather.service.msn.com/find.aspx");
 
