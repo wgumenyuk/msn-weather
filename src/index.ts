@@ -1,4 +1,4 @@
-import { parseStringPromise as parseXML } from "xml2js";
+import x2js from "fast-xml-parser";
 import { isDegreeType, isLanguageCode } from "./utils/validators";
 import request from "./utils/request";
 import textIDs from "./utils/textIDs";
@@ -89,31 +89,25 @@ async function search(options: Options): Promise<Weather> {
         `weasearchstr=${encodeURIComponent(options.location)}`;
 
     const response = await request(url);
-    const json = await parseXML(response, {
-        trim: true,
-        mergeAttrs: true
+
+    const json = x2js.parse(response, {
+        attributeNamePrefix: "",
+        ignoreAttributes: false,
+        ignoreNameSpace: true,
+        trimValues: true
     });
 
     if(!json || !json.weatherdata || !json.weatherdata.weather) {
-        throw new Error("Couldn't parse response body");
+        throw new Error("Bad response: Failed to parse response body");
     }
 
     const data = json.weatherdata.weather[0];
 
-    if(!data.current) {
-        throw new Error("Bad response: Failed to receive current weather data");
+    if(!data) {
+        throw new Error("Bad response: Failed to receive weather data");
     }
 
-    const current = data.current[0];
-
-    for(const key in current) {
-        current[key] = current[key][0];
-    }
-
-    if(!data.forecast) {
-        throw new Error("Bad response: Failed to receive forecast weather data");
-    }
-
+    const current = data.current;
     const forecasts = [];
 
     for(let i = 1; i < data.forecast.length; i++) { 
