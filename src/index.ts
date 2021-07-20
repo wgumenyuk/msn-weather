@@ -1,7 +1,7 @@
 import x2js from "fast-xml-parser";
-import { isDegreeType, isLanguageCode } from "./utils/validators";
-import request from "./utils/request";
-import textIDs from "./utils/textIDs";
+import { isDegreeType, isLanguageCode } from "./core/validators";
+import request from "./core/request";
+import textIDs from "./core/textIDs";
 
 // #region Types and interfaces
 type Degree = "C" | "F";
