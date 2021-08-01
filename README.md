@@ -25,6 +25,7 @@
 - [Other languages](#other-languages)
 - [Resources](#resources)
 - [Acknowledgements](#acknowledgements)
+  - [Contributors](#contributors)
 - [License](#license)
 
 ## About
