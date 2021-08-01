@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2.1.2 (August 01, 2021)
+### Added
+- Added a contributors anchor
+- Added a encodeURIComponent explanation to API documentation
+
+### Changed
+- Replaced version badge with size badge
+
 ## 2.1.1 (July 20, 2021)
 ### Changed
 - Switched from `xml2js` to `fast-xml-parser`: this leads to a much smaller bundle size (see [xml2js](https://bundlephobia.com/package/xml2js@0.4.23) vs. [fast-xml-parser](https://bundlephobia.com/package/fast-xml-parser@3.19.0))
