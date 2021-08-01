@@ -9,7 +9,7 @@
   [![Codecov](https://img.shields.io/codecov/c/github/wgumenyuk/msn-weather?label=Coverage&logo=codecov&style=flat-square)](https://codecov.io/gh/wgumenyuk/msn-weather)
   [![Code Climate](https://img.shields.io/codeclimate/maintainability/wgumenyuk/msn-weather?label=Maintainability&logo=Code%20Climate&style=flat-square)](https://codeclimate.com/github/wgumenyuk/msn-weather)
   [![NPM downloads](https://img.shields.io/npm/dt/msn-weather?label=Downloads&style=flat-square)](https://www.npmjs.com/package/msn-weather)
-  [![Version](https://img.shields.io/github/package-json/v/wgumenyuk/msn-weather?label=Version&style=flat-square)](https://github.com/wgumenyuk/msn-weather)
+  [![Size](https://img.shields.io/bundlephobia/minzip/msn-weather?label=Size&style=flat-square)](https://github.com/wgumenyuk/msn-weather)
   [![License](https://img.shields.io/github/license/wgumenyuk/msn-weather?label=License&style=flat-square)](./LICENSE)
   
   [![NPM install info](https://nodei.co/npm/msn-weather.png?downloads=true&stars=true)](https://www.npmjs.com/package/msn-weather)
