@@ -159,7 +159,7 @@ Retrieves weather data for a given location. Returns a promise with weather data
 Options for the search.
 | Parameter | Type | Optional | Default | Description |
 |-|-|-|-|-|
-| `location` | String | ❌ | None | Location for the weather data. |
+| `location` | String | ❌ | None | Location for the weather data. The location will be encoded automatically using [`encodeURIComponent`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent). |
 | `language` | String | ✔  | `en`  | Language in which weather text will be returned. The value must be a [ISO 639.1:2002 language code](https://en.wikipedia.org/wiki/ISO_639-1). |
 | `degreeType` | String | ✔ | `C` | Degree type for temperature values. Either Celsius (`C`) or Fahrenheit (`F`). |
 
