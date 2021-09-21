@@ -112,7 +112,7 @@ describe("msn-weather", () => {
                 .toThrow("Bad response: Failed to parse response body");
         });
 
-        it("should fail if the respond is bad", async () => {    
+        it("should fail if the response body is incomplete", async () => {    
             msnMock
                 .get("")
                 .query({
