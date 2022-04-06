@@ -178,5 +178,3 @@ A special thanks goes out to these contributors:
 
 ## License
 This project is licensed under [MIT](./LICENSE).
-
-&copy; 2021 [Wlad Gumenyuk](https://github.com/wgumenyuk)
