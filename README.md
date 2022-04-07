@@ -41,12 +41,12 @@ As the name suggests, this wrapper uses the MSN weather API behind the scenes.
 ## Installation
 Install this package using NPM:
 
-```
-$ npm install msn-weather --save
+```sh-session
+npm install msn-weather --save
 ```
 
 ## Usage
-```typescript
+```ts
 import weather from "msn-weather";
 
 const data = await weather.search({
@@ -58,17 +58,17 @@ const data = await weather.search({
 
 ### Usage with CommonJS
 To use this library with CommonJS, use this approach:
-```javascript
+```js
 const weather = require("msn-weather").default;
 ```
 
 ### Retrieved data format
 You will receive a JavaScript object looking like this:
 
-<details open="open">
-  <summary>Show code</summary>
+<details>
+  <summary>Show response</summary>
   
-  ```javascript
+  ```js
   {
     current: {
       date: "2021-06-09",
