@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file. This projec
 ## 2.1.2 (August 01, 2021)
 ### Added
 - Added a contributors anchor
-- Added a encodeURIComponent explanation to API documentation
+- Added a [`encodeURIComponent`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) explanation to API documentation
 
 ### Changed
 - Replaced version badge with size badge
