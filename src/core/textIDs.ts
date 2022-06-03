@@ -15,7 +15,7 @@ const textIDs: { [key: string]: string } = {
     "8": "light_rain",
     "9": "light_rain",
     "10": "rain_sleet_mix",
-    "11": "light_rain",
+    "11": "rain_shower",
     "12": "rain",
     "13": "light_snow",
     "14": "snow",
