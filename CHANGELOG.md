@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## 2.1.3 (June 04, 2022)
+### Fixed
+- Faulty index access giving back first character only
+
+### Changed
+- Changed `textID` 11 from `light_rain` to `rain_shower`
+
 ## 2.1.2 (August 01, 2021)
 ### Added
 - Added a contributors anchor
