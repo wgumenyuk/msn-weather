@@ -114,8 +114,8 @@ async function search(options: Options): Promise<Weather> {
         const forecast = data.forecast[i];
 
         forecasts.push({
-            date: forecast.date[0],
-            day: forecast.day[0],
+            date: forecast.date,
+            day: forecast.day,
             temperature: {
                 low: forecast.low[0] + `°${degreeType}`,
                 high: forecast.high[0] + `°${degreeType}`,
