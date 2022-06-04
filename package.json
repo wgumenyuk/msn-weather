@@ -1,6 +1,6 @@
 {
   "name": "msn-weather",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "A simple MSN Weather API wrapper with built-in TypeScript support.",
   "main": "./build/index.js",
   "scripts": {
