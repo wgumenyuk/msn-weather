@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## Unreleased
+- Changed `textID` 28 from `partly_sunny` to `mostly_cloudy`
+
 ## 2.1.3 (June 04, 2022)
 ### Fixed
 - Faulty index access giving back first character only
