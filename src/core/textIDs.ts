@@ -36,7 +36,7 @@ const textIDs: { [key: string]: string } = {
     "27": "mostly_cloudy_night",
     "29": "mostly_cloudy_night",
     "33": "mostly_cloudy_night",
-    "28": "partly_sunny",
+    "28": "mostly_cloudy",
     "30": "partly_sunny",
     "34": "partly_sunny",
     "31": "clear_night",
