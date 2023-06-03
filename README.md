@@ -15,6 +15,9 @@
   [![NPM install info](https://nodei.co/npm/msn-weather.png?downloads=true&stars=true)](https://www.npmjs.com/package/msn-weather)
 </div>
 
+## Deprecation Notice
+> ⚠️ This package is deprecated and no longer works.
+
 ## Table of contents
 - [About](#about)
 - [Installation](#installation)
